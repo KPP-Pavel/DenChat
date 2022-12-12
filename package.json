@@ -1,0 +1,28 @@
+{
+  "name": "denchat",
+  "version": "1.0.0",
+  "description": "son`s first project",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "tsnd --respawn index.ts --watch src",
+    "tsc": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KPP-Pavel/DenChat.git"
+  },
+  "author": "den",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KPP-Pavel/DenChat/issues"
+  },
+  "homepage": "https://github.com/KPP-Pavel/DenChat#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.14",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
