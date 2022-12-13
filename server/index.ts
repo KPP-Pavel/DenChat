@@ -1,7 +1,16 @@
 import express from 'express';
 import path from 'path';
+import livereload from 'livereload';
+import connectLiveReload from 'connect-livereload';
 
 const port = 3000;
+
+const liveReloadServer = livereload.createServer();
+liveReloadServer.server.once('connection', () => {
+    setTimeout(() => {
+        liveReloadServer.refresh('/');
+    }, 100);
+});
 
 export class Server {
     app;
@@ -14,12 +23,13 @@ export class Server {
     }
 
     middlewares = () => {
+        this.app.use(connectLiveReload());
         this.app.use(express.json());
     };
 
     routes = () => {
-        this.app.get('/', (req, res) => {
-            res.sendFile(path.join(__dirname, '/index.html'));
+        this.app.get('/', (req, res) => {           
+            res.sendFile(path.join(__dirname, '..', 'src', 'index.html'));
             // res.send('Hello World!');
         });
     };

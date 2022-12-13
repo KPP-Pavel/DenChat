@@ -4,7 +4,7 @@
   "description": "son`s first project",
   "main": "index.ts",
   "scripts": {
-    "dev": "tsnd --respawn index.ts --watch src",
+    "dev": "nodemon index.ts",
     "tsc": "tsc"
   },
   "repository": {
@@ -18,11 +18,15 @@
   },
   "homepage": "https://github.com/KPP-Pavel/DenChat#readme",
   "devDependencies": {
+    "@types/connect-livereload": "^0.6.0",
     "@types/express": "^4.17.14",
-    "ts-node-dev": "^2.0.0",
+    "@types/livereload": "^0.9.2",
+    "connect-livereload": "^0.6.1",
+    "livereload": "^0.9.3",
     "typescript": "^4.9.4"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
   }
 }
