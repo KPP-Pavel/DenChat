@@ -25,10 +25,11 @@ export class Server {
     middlewares = () => {
         this.app.use(connectLiveReload());
         this.app.use(express.json());
+        this.app.use(express.static(path.join(__dirname, '..', 'src')))
     };
 
     routes = () => {
-        this.app.get('/', (req, res) => {           
+        this.app.get('/', (req, res) => {
             res.sendFile(path.join(__dirname, '..', 'src', 'index.html'));
             // res.send('Hello World!');
         });

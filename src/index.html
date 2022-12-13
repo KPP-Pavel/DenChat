@@ -1,12 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-    </head>
-    <body>
-        <div>hello world</div>
-    </body>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./chat.css" />
+    <script src="./index.js" defer></script>
+    <title>Chat</title>
+</head>
+
+<body>
+    <div class="wraper">
+        <div class="header">
+            <div class="avatar">
+                <img class="photo" src="https://i.imgflip.com/64gak3.png" />
+            </div>
+            <h1 class="user">Пользователь</h1>
+        </div>
+        <div class="messenger" id="messager">
+        </div>
+        <div class="line">
+            <div class="text">
+                <input type="text" id="text" oninput="setMessage(this.value)" onkeypress="onKeyPressHander(event.key)" placeholder='Сообщение'>
+                <button class="sending" onclick="sendHendler()">Send</button>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>
